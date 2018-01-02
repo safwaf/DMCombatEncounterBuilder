@@ -7,3 +7,13 @@ c:\users\tyson geib\documents\visual studio 2017\Projects\DMCombatEncounterBuild
 c:\users\tyson geib\documents\visual studio 2017\Projects\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\DMCombatEncounterBuilder.csproj.GenerateResource.Cache
 c:\users\tyson geib\documents\visual studio 2017\Projects\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 c:\users\tyson geib\documents\visual studio 2017\Projects\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\DMCombatEncounterBuilder.csprojResolveAssemblyReference.cache
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CombatEncounterBuilder.resources
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\DMCombatEncounterBuilder.csproj.GenerateResource.Cache
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\DMCombatEncounterBuilder.csproj.CoreCompileInputs.cache
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Tyson Geib\Desktop\DnD App\DM Tools\DMCombatEncounterBuilder\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

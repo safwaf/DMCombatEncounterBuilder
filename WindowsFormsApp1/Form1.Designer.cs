@@ -67,6 +67,10 @@
             this.SelectedActionRemoveButton = new System.Windows.Forms.Button();
             this.SelectedActionDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.NotesTextBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.SaveCreatureButton = new System.Windows.Forms.Button();
+            this.IncompleteFormLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ChallengeRatingNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpeedNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HitPointsNumeric)).BeginInit();
@@ -262,7 +266,6 @@
             this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 16;
             this.label9.Text = "STR";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // StrengthNumeric
             // 
@@ -471,11 +474,52 @@
             this.label18.TabIndex = 37;
             this.label18.Text = "Description";
             // 
+            // NotesTextBox
+            // 
+            this.NotesTextBox.Location = new System.Drawing.Point(15, 305);
+            this.NotesTextBox.Multiline = true;
+            this.NotesTextBox.Name = "NotesTextBox";
+            this.NotesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.NotesTextBox.Size = new System.Drawing.Size(450, 50);
+            this.NotesTextBox.TabIndex = 38;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(15, 287);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(64, 13);
+            this.label19.TabIndex = 40;
+            this.label19.Text = "Other Notes";
+            // 
+            // SaveCreatureButton
+            // 
+            this.SaveCreatureButton.Location = new System.Drawing.Point(15, 362);
+            this.SaveCreatureButton.Name = "SaveCreatureButton";
+            this.SaveCreatureButton.Size = new System.Drawing.Size(100, 23);
+            this.SaveCreatureButton.TabIndex = 41;
+            this.SaveCreatureButton.Text = "Save Creature";
+            this.SaveCreatureButton.UseVisualStyleBackColor = true;
+            this.SaveCreatureButton.Click += new System.EventHandler(this.SaveCreatureButton_Click);
+            // 
+            // IncompleteFormLabel
+            // 
+            this.IncompleteFormLabel.AutoSize = true;
+            this.IncompleteFormLabel.ForeColor = System.Drawing.Color.Red;
+            this.IncompleteFormLabel.Location = new System.Drawing.Point(121, 362);
+            this.IncompleteFormLabel.Name = "IncompleteFormLabel";
+            this.IncompleteFormLabel.Size = new System.Drawing.Size(0, 13);
+            this.IncompleteFormLabel.TabIndex = 42;
+            // 
             // CombatEncounterBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 355);
+            this.ClientSize = new System.Drawing.Size(477, 402);
+            this.Controls.Add(this.IncompleteFormLabel);
+            this.Controls.Add(this.SaveCreatureButton);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.NotesTextBox);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.SelectedActionDescriptionTextBox);
             this.Controls.Add(this.SelectedActionRemoveButton);
@@ -572,6 +616,10 @@
         private System.Windows.Forms.Button SelectedActionRemoveButton;
         private System.Windows.Forms.TextBox SelectedActionDescriptionTextBox;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox NotesTextBox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button SaveCreatureButton;
+        private System.Windows.Forms.Label IncompleteFormLabel;
     }
 }
 

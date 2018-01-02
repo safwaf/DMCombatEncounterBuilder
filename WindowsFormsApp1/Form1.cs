@@ -24,11 +24,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ActionAddButton_Click(object sender, EventArgs e)
         {
             ActiveCreature.AddAction(ActionTextBox.Text, ActionDescriptionTextBox.Text);
@@ -40,6 +35,56 @@ namespace WindowsFormsApp1
         private void SelectedActionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             SelectedActionDescriptionTextBox.Text = ActiveCreature.ActionList[SelectedActionComboBox.SelectedIndex].Description;
+        }
+
+        private void SaveCreatureButton_Click(object sender, EventArgs e)
+        {
+            if (!IsFormComplete())  //if the form is not filled out properly, we will exit. IsFormComplete displays the errors itself
+            {
+                return;
+            }
+            BuildActiveCreature();
+            ActiveCreature.ExportCreatureAsHTML("",ActiveCreature.Name+".html");
+        }
+
+        private bool IsFormComplete()
+        {
+            //this function checks to make sure all necessary form controls have been properly filled
+            //in the future, it may also give warnings or recommendations about inadvisable creature choices (e.g. a creature with a speed of 0 cannot move)
+            if (NameTextBox.Text == "")
+            {
+                IncompleteFormLabel.Text = "Please provide a monster name";
+                return false;
+            }
+            if (HitPointsNumeric.Value == 0)
+            {
+                IncompleteFormLabel.Text = "A creature cannot have less than 1 hit point";
+                return false;
+            }
+            return true;
+        }
+
+        private void BuildActiveCreature()
+        {
+            //This function builds all of the form data into the creature in preparation for saving
+            //We use this to avoid constantly updating the object every time the user adjusts a control
+            ActiveCreature.Name = NameTextBox.Text;
+            ActiveCreature.Size = (enumSize)SizeComboBox.SelectedIndex;
+            ActiveCreature.Type = (enumType)TypeComboBox.SelectedIndex;
+            ActiveCreature.Alignment = (enumAlignment)AlignmentComboBox.SelectedIndex;
+            ActiveCreature.ArmorClass = (int)ArmorClassNumeric.Value;
+            ActiveCreature.HitPoints = (int)HitPointsNumeric.Value;
+            ActiveCreature.Speed = (int)SpeedNumeric.Value;
+            ActiveCreature.ChallengeRating = (int)ChallengeRatingNumeric.Value;
+            ActiveCreature.Strength = (int)StrengthNumeric.Value;
+            ActiveCreature.Dexterity = (int)DexterityNumeric.Value;
+            ActiveCreature.Constitution = (int)ConstitutionNumeric.Value;
+            ActiveCreature.Intelligence = (int)IntelligenceNumeric.Value;
+            ActiveCreature.Wisdom = (int)WisdomNumeric.Value;
+            ActiveCreature.Charisma = (int)CharismaNumeric.Value;
+            ActiveCreature.Notes = NotesTextBox.Text;
+            //Actions are already set using the "Add Action" button
+            ActiveCreature.CalculateXP();   //XP is not currently a separate input
         }
     }
 }
