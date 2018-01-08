@@ -89,6 +89,7 @@ namespace WindowsFormsApp1
         public void CalculateXP()
         {
             //this function gets an XP value from a Challenge Rating
+            //not completed
             XP = ChallengeRating * 100;
         }
 

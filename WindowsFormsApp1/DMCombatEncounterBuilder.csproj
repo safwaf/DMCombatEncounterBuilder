@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adventure.cs" />
     <Compile Include="Creature.cs" />
+    <Compile Include="Encounter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
             {
                 return;
             }
-            BuildActiveCreature();
+            Build();
             ActiveCreature.ExportCreatureAsHTML("",ActiveCreature.Name+".html");
         }
 
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
             return true;
         }
 
-        private void BuildActiveCreature()
+        private void Build()
         {
             //This function builds all of the form data into the creature in preparation for saving
             //We use this to avoid constantly updating the object every time the user adjusts a control
