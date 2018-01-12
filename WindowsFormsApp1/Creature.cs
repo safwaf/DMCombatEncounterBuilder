@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
             XP = ChallengeRating * 100;
         }
 
-        public void ExportCreatureAsHTML(string Directory,string filename)
+        public void ExportAsHTML(string Directory,string filename)
         {
             StreamWriter PCSW = new StreamWriter(Directory + filename);
             PCSW.WriteLine("<HTML>");

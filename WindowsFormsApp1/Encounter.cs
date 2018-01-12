@@ -25,5 +25,10 @@ namespace WindowsFormsApp1
         public string Description;
         public List<CreatureInstance> CreatureList = new List<CreatureInstance>();
 
+
+        public void ExportAsHTML(string Directory, string filename)
+        {
+
+        }
     }
 }
