@@ -11,5 +11,12 @@ namespace WindowsFormsApp1
         public string Name;
         public string Description;
         public int Value;
+
+        public Item(string name, int value, string description)
+        {
+            Name = name;
+            Value = value;
+            Description = description;
+        }
     }
 }

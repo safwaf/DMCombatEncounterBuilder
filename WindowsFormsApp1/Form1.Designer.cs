@@ -83,6 +83,26 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.ShopNameBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.ShopDescriptionBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.ShopItemDescriptionBox = new System.Windows.Forms.TextBox();
+            this.ShopAddItemButton = new System.Windows.Forms.Button();
+            this.ShopItemNameBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.ShopSelectedItemDescriptionBox = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.ShopSelectedItemComboBox = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.ShopItemValueBox = new System.Windows.Forms.TextBox();
+            this.ShopSelectedItemValueBox = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.ShopSaveButton = new System.Windows.Forms.Button();
+            this.ShopIncompleteFormBox = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ChallengeRatingNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpeedNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HitPointsNumeric)).BeginInit();
@@ -96,6 +116,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -521,7 +542,7 @@
             // 
             this.IncompleteFormLabel.AutoSize = true;
             this.IncompleteFormLabel.ForeColor = System.Drawing.Color.Red;
-            this.IncompleteFormLabel.Location = new System.Drawing.Point(121, 362);
+            this.IncompleteFormLabel.Location = new System.Drawing.Point(160, 368);
             this.IncompleteFormLabel.Name = "IncompleteFormLabel";
             this.IncompleteFormLabel.Size = new System.Drawing.Size(0, 13);
             this.IncompleteFormLabel.TabIndex = 42;
@@ -542,6 +563,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.NotesTextBox);
+            this.tabPage1.Controls.Add(this.IncompleteFormLabel);
             this.tabPage1.Controls.Add(this.NameTextBox);
             this.tabPage1.Controls.Add(this.SaveCreatureButton);
             this.tabPage1.Controls.Add(this.SizeComboBox);
@@ -665,12 +687,32 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.ShopIncompleteFormBox);
+            this.tabPage4.Controls.Add(this.ShopSaveButton);
+            this.tabPage4.Controls.Add(this.ShopSelectedItemValueBox);
+            this.tabPage4.Controls.Add(this.label27);
+            this.tabPage4.Controls.Add(this.ShopItemValueBox);
+            this.tabPage4.Controls.Add(this.label26);
+            this.tabPage4.Controls.Add(this.label24);
+            this.tabPage4.Controls.Add(this.ShopSelectedItemDescriptionBox);
+            this.tabPage4.Controls.Add(this.button4);
+            this.tabPage4.Controls.Add(this.label25);
+            this.tabPage4.Controls.Add(this.ShopSelectedItemComboBox);
+            this.tabPage4.Controls.Add(this.label22);
+            this.tabPage4.Controls.Add(this.ShopItemDescriptionBox);
+            this.tabPage4.Controls.Add(this.ShopAddItemButton);
+            this.tabPage4.Controls.Add(this.ShopItemNameBox);
+            this.tabPage4.Controls.Add(this.label23);
+            this.tabPage4.Controls.Add(this.ShopDescriptionBox);
+            this.tabPage4.Controls.Add(this.label21);
+            this.tabPage4.Controls.Add(this.ShopNameBox);
+            this.tabPage4.Controls.Add(this.label20);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(483, 397);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Shop";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage5
@@ -683,13 +725,185 @@
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(18, 18);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(35, 13);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Name";
+            // 
+            // ShopNameBox
+            // 
+            this.ShopNameBox.Location = new System.Drawing.Point(59, 15);
+            this.ShopNameBox.Name = "ShopNameBox";
+            this.ShopNameBox.Size = new System.Drawing.Size(126, 20);
+            this.ShopNameBox.TabIndex = 1;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(18, 45);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(60, 13);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Description";
+            // 
+            // ShopDescriptionBox
+            // 
+            this.ShopDescriptionBox.Location = new System.Drawing.Point(21, 62);
+            this.ShopDescriptionBox.Multiline = true;
+            this.ShopDescriptionBox.Name = "ShopDescriptionBox";
+            this.ShopDescriptionBox.Size = new System.Drawing.Size(392, 117);
+            this.ShopDescriptionBox.TabIndex = 3;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(274, 198);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(60, 13);
+            this.label22.TabIndex = 38;
+            this.label22.Text = "Description";
+            // 
+            // ShopItemDescriptionBox
+            // 
+            this.ShopItemDescriptionBox.Location = new System.Drawing.Point(277, 215);
+            this.ShopItemDescriptionBox.Multiline = true;
+            this.ShopItemDescriptionBox.Name = "ShopItemDescriptionBox";
+            this.ShopItemDescriptionBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ShopItemDescriptionBox.Size = new System.Drawing.Size(194, 50);
+            this.ShopItemDescriptionBox.TabIndex = 37;
+            // 
+            // ShopAddItemButton
+            // 
+            this.ShopAddItemButton.Location = new System.Drawing.Point(21, 242);
+            this.ShopAddItemButton.Name = "ShopAddItemButton";
+            this.ShopAddItemButton.Size = new System.Drawing.Size(100, 23);
+            this.ShopAddItemButton.TabIndex = 36;
+            this.ShopAddItemButton.Text = "Add Item";
+            this.ShopAddItemButton.UseVisualStyleBackColor = true;
+            this.ShopAddItemButton.Click += new System.EventHandler(this.ShopAddItemButton_Click);
+            // 
+            // ShopItemNameBox
+            // 
+            this.ShopItemNameBox.Location = new System.Drawing.Point(21, 215);
+            this.ShopItemNameBox.Name = "ShopItemNameBox";
+            this.ShopItemNameBox.Size = new System.Drawing.Size(100, 20);
+            this.ShopItemNameBox.TabIndex = 35;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(18, 198);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(27, 13);
+            this.label23.TabIndex = 34;
+            this.label23.Text = "Item";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(274, 287);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(60, 13);
+            this.label24.TabIndex = 43;
+            this.label24.Text = "Description";
+            // 
+            // ShopSelectedItemDescriptionBox
+            // 
+            this.ShopSelectedItemDescriptionBox.Location = new System.Drawing.Point(277, 303);
+            this.ShopSelectedItemDescriptionBox.Multiline = true;
+            this.ShopSelectedItemDescriptionBox.Name = "ShopSelectedItemDescriptionBox";
+            this.ShopSelectedItemDescriptionBox.ReadOnly = true;
+            this.ShopSelectedItemDescriptionBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ShopSelectedItemDescriptionBox.Size = new System.Drawing.Size(194, 50);
+            this.ShopSelectedItemDescriptionBox.TabIndex = 42;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(21, 331);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 23);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "Remove Item";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(21, 287);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.TabIndex = 40;
+            this.label25.Text = "Item List";
+            // 
+            // ShopSelectedItemComboBox
+            // 
+            this.ShopSelectedItemComboBox.FormattingEnabled = true;
+            this.ShopSelectedItemComboBox.Location = new System.Drawing.Point(21, 303);
+            this.ShopSelectedItemComboBox.Name = "ShopSelectedItemComboBox";
+            this.ShopSelectedItemComboBox.Size = new System.Drawing.Size(100, 21);
+            this.ShopSelectedItemComboBox.TabIndex = 39;
+            this.ShopSelectedItemComboBox.SelectedIndexChanged += new System.EventHandler(this.ShopSelectedItemComboBox_SelectedIndexChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(142, 198);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(34, 13);
+            this.label26.TabIndex = 44;
+            this.label26.Text = "Value";
+            // 
+            // ShopItemValueBox
+            // 
+            this.ShopItemValueBox.Location = new System.Drawing.Point(145, 215);
+            this.ShopItemValueBox.Name = "ShopItemValueBox";
+            this.ShopItemValueBox.Size = new System.Drawing.Size(100, 20);
+            this.ShopItemValueBox.TabIndex = 45;
+            // 
+            // ShopSelectedItemValueBox
+            // 
+            this.ShopSelectedItemValueBox.Location = new System.Drawing.Point(145, 304);
+            this.ShopSelectedItemValueBox.Name = "ShopSelectedItemValueBox";
+            this.ShopSelectedItemValueBox.Size = new System.Drawing.Size(100, 20);
+            this.ShopSelectedItemValueBox.TabIndex = 47;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(142, 287);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(34, 13);
+            this.label27.TabIndex = 46;
+            this.label27.Text = "Value";
+            // 
+            // ShopSaveButton
+            // 
+            this.ShopSaveButton.Location = new System.Drawing.Point(21, 361);
+            this.ShopSaveButton.Name = "ShopSaveButton";
+            this.ShopSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.ShopSaveButton.TabIndex = 48;
+            this.ShopSaveButton.Text = "Save Shop";
+            this.ShopSaveButton.UseVisualStyleBackColor = true;
+            this.ShopSaveButton.Click += new System.EventHandler(this.ShopSaveButton_Click);
+            // 
+            // ShopIncompleteFormBox
+            // 
+            this.ShopIncompleteFormBox.AutoSize = true;
+            this.ShopIncompleteFormBox.Location = new System.Drawing.Point(117, 366);
+            this.ShopIncompleteFormBox.Name = "ShopIncompleteFormBox";
+            this.ShopIncompleteFormBox.Size = new System.Drawing.Size(0, 13);
+            this.ShopIncompleteFormBox.TabIndex = 49;
+            // 
             // CombatEncounterBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(515, 447);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.IncompleteFormLabel);
             this.Name = "CombatEncounterBuilder";
             this.Text = "DM Tools - Combat Enounter Builder";
             ((System.ComponentModel.ISupportInitialize)(this.ChallengeRatingNumeric)).EndInit();
@@ -707,8 +921,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -769,6 +984,26 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox ShopSelectedItemDescriptionBox;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox ShopSelectedItemComboBox;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox ShopItemDescriptionBox;
+        private System.Windows.Forms.Button ShopAddItemButton;
+        private System.Windows.Forms.TextBox ShopItemNameBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox ShopDescriptionBox;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox ShopNameBox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox ShopSelectedItemValueBox;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox ShopItemValueBox;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button ShopSaveButton;
+        private System.Windows.Forms.Label ShopIncompleteFormBox;
     }
 }
 

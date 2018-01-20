@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
     {
         List<Creature> CreatureList = new List<Creature>();
         Creature ActiveCreature = new Creature();
+        Shop ActiveShop = new Shop();
+
         public CombatEncounterBuilder()
         {
             InitializeComponent();
@@ -85,6 +87,52 @@ namespace WindowsFormsApp1
             ActiveCreature.Notes = NotesTextBox.Text;
             //Actions are already set using the "Add Action" button
             ActiveCreature.CalculateXP();   //XP is not currently a separate input
+        }
+
+        private void BuildActiveShop()
+        {
+            ActiveShop.Name = ShopNameBox.Text;
+            ActiveShop.Description = ShopDescriptionBox.Text;
+        }
+
+        private void ShopAddItemButton_Click(object sender, EventArgs e)
+        {
+            ActiveShop.AddItem(ShopItemNameBox.Text,
+                Int32.Parse(ShopItemValueBox.Text),
+                ShopItemDescriptionBox.Text);
+            ShopSelectedItemComboBox.Items.Add(ShopItemNameBox.Text);
+            ShopItemNameBox.Clear();
+            ShopItemValueBox.Clear();
+            ShopItemDescriptionBox.Clear();
+        }
+
+        private void ShopSelectedItemComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShopSelectedItemValueBox.Text = ActiveShop.Inventory[ShopSelectedItemComboBox.SelectedIndex].Value.ToString();
+            ShopSelectedItemDescriptionBox.Text = ActiveShop.Inventory[ShopSelectedItemComboBox.SelectedIndex].Description;
+        }
+
+        private void ShopSaveButton_Click(object sender, EventArgs e)
+        {
+            if (!ShopIsFormComplete())  //if the form is not filled out properly, we will exit. IsFormComplete displays the errors itself
+            {
+                return;
+            }
+            BuildActiveShop();
+            ActiveShop.ExportAsHTML("", ActiveShop.Name + ".html");
+        }
+
+        private bool ShopIsFormComplete()
+        {
+            //this function checks to make sure all necessary form controls have been properly filled
+            //in the future, it may also give warnings or recommendations about inadvisable creature choices (e.g. a creature with a speed of 0 cannot move)
+            if (ShopNameBox.Text == "")
+            {
+                ShopIncompleteFormBox.Text = "Please provide a shop name";
+                return false;
+            }
+            
+            return true;
         }
     }
 }
