@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Xml;
 
 namespace WindowsFormsApp1
 {
@@ -91,6 +92,41 @@ namespace WindowsFormsApp1
             //this function gets an XP value from a Challenge Rating
             //not completed
             XP = ChallengeRating * 100;
+        }
+
+        public Creature(string Directory, string filename)
+        {
+            //this constructor creates the object by parsing it from an XML file
+            //bulky. Consider reconfiguring all save-load classes to store variables in an array/list, then we could make use of a generic parser
+            XmlDocument LoadFile = new XmlDocument();
+            LoadFile.Load(Directory + filename);
+            Name = LoadFile.DocumentElement.SelectSingleNode("Name").Value;
+            Size = (enumSize)int.Parse(LoadFile.DocumentElement.SelectSingleNode("Size").Value);
+            Type = (enumType)int.Parse(LoadFile.DocumentElement.SelectSingleNode("Type").Value);
+            Alignment = (enumAlignment)int.Parse(LoadFile.DocumentElement.SelectSingleNode("Alignment").Value);
+            ArmorClass = int.Parse(LoadFile.DocumentElement.SelectSingleNode("ArmorClass").Value);
+            HitPoints = int.Parse(LoadFile.DocumentElement.SelectSingleNode("HitPoints").Value);
+            Speed = int.Parse(LoadFile.DocumentElement.SelectSingleNode("Speed").Value);
+            ChallengeRating = int.Parse(LoadFile.DocumentElement.SelectSingleNode("ChallengeRating").Value);
+            XP = int.Parse(LoadFile.DocumentElement.SelectSingleNode("XP").Value);
+            Strength = int.Parse(LoadFile.DocumentElement.SelectSingleNode("Strength").Value);
+            Dexterity = int.Parse(LoadFile.DocumentElement.SelectSingleNode("Desterity").Value);
+            Constitution = int.Parse(LoadFile.DocumentElement.SelectSingleNode("Constitution").Value);
+            Intelligence = int.Parse(LoadFile.DocumentElement.SelectSingleNode("Intelligence").Value);
+            Wisdom = int.Parse(LoadFile.DocumentElement.SelectSingleNode("Wisdom").Value);
+            Charisma = int.Parse(LoadFile.DocumentElement.SelectSingleNode("Charisma").Value);
+
+            //proposed model for loading lists, provided parellel saving method implemented
+            int ActionCount = int.Parse(LoadFile.DocumentElement.SelectSingleNode("ActionCount").Value);
+            for (int i=1;i<=ActionCount;i++)
+            {
+
+            }
+        }
+
+        public void ExportAsXML(string Directory)
+        {
+
         }
 
         public void ExportAsHTML(string Directory,string filename)

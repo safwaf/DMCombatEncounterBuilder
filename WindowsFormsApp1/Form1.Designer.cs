@@ -83,6 +83,13 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.OverviewTab = new System.Windows.Forms.TabPage();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newAdventureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openAdventureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAdventureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ChallengeRatingNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpeedNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HitPointsNumeric)).BeginInit();
@@ -96,6 +103,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // NameTextBox
@@ -533,7 +541,8 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Controls.Add(this.OverviewTab);
+            this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(491, 423);
@@ -683,13 +692,69 @@
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // OverviewTab
+            // 
+            this.OverviewTab.Location = new System.Drawing.Point(4, 22);
+            this.OverviewTab.Name = "OverviewTab";
+            this.OverviewTab.Padding = new System.Windows.Forms.Padding(3);
+            this.OverviewTab.Size = new System.Drawing.Size(483, 397);
+            this.OverviewTab.TabIndex = 5;
+            this.OverviewTab.Text = "Overview";
+            this.OverviewTab.UseVisualStyleBackColor = true;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(515, 24);
+            this.menuStrip1.TabIndex = 44;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newAdventureToolStripMenuItem,
+            this.openAdventureToolStripMenuItem,
+            this.saveAdventureToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // newAdventureToolStripMenuItem
+            // 
+            this.newAdventureToolStripMenuItem.Name = "newAdventureToolStripMenuItem";
+            this.newAdventureToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.newAdventureToolStripMenuItem.Text = "New Adventure";
+            // 
+            // openAdventureToolStripMenuItem
+            // 
+            this.openAdventureToolStripMenuItem.Name = "openAdventureToolStripMenuItem";
+            this.openAdventureToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.openAdventureToolStripMenuItem.Text = "Open Adventure";
+            // 
+            // saveAdventureToolStripMenuItem
+            // 
+            this.saveAdventureToolStripMenuItem.Name = "saveAdventureToolStripMenuItem";
+            this.saveAdventureToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.saveAdventureToolStripMenuItem.Text = "Save Adventure";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // CombatEncounterBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 447);
+            this.ClientSize = new System.Drawing.Size(515, 494);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.IncompleteFormLabel);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "CombatEncounterBuilder";
             this.Text = "DM Tools - Combat Enounter Builder";
             ((System.ComponentModel.ISupportInitialize)(this.ChallengeRatingNumeric)).EndInit();
@@ -707,6 +772,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,6 +836,13 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.TabPage OverviewTab;
+        private System.Windows.Forms.ToolStripMenuItem newAdventureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openAdventureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAdventureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
