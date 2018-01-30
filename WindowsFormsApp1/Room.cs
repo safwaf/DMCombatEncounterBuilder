@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
         public string Description;
 
         //the app currently limits the player to one encounter per room
-        public Encounter Encounter;
+        public Encounter Encounter = null;
 
 
         public void ExportAsHTML(string Directory,string filename)
@@ -36,10 +36,27 @@ namespace WindowsFormsApp1
             SW.WriteLine("<BODY bgcolor=\"Linen\" text =\"FireBrick\">");   //later we can use this to customize colour schemes for each monster. For now, we replicate the MM color scheme
             SW.WriteLine("<h1>" + Name + "</h1><br>");
             SW.WriteLine(Description);
+            if (Encounter != null)
+            {
+                SW.WriteLine("<a href=\"" + Encounter.Name + ".html\">"+Encounter.Name+"</a><br>");
+            }
             if (EastExit != null)
             {
-                SW.WriteLine("<a href=\""+EastExit.Name+".html"
+                SW.WriteLine("<a href=\"" + EastExit.Name + ".html\">Exit East</a><br>");
             }
+            if (NorthExit != null)
+            {
+                SW.WriteLine("<a href=\"" + NorthExit.Name + ".html\">Exit North</a><br>");
+            }
+            if (SouthExit != null)
+            {
+                SW.WriteLine("<a href=\"" + WestExit.Name + ".html\">Exit South</a><br>");
+            }
+            if (WestExit != null)
+            {
+                SW.WriteLine("<a href=\"" + SouthExit.Name + ".html\">Exit West</a><br>");
+            }
+
         }
 
     }
