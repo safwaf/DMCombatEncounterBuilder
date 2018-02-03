@@ -21,6 +21,6 @@ namespace WindowsFormsApp1
     class NPC
     {
         public Creature Creature;
-
+        public List<DialogueOption> DialogOptions = new List<DialogueOption>();
     }
 }

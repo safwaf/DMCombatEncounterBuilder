@@ -13,7 +13,11 @@ namespace WindowsFormsApp1
     public partial class CombatEncounterBuilder : Form
     {
         List<Creature> CreatureList = new List<Creature>();
+
+        Encounter ActiveEncounter = new Encounter();
         Creature ActiveCreature = new Creature();
+
+
         public CombatEncounterBuilder()
         {
             InitializeComponent();
@@ -39,15 +43,17 @@ namespace WindowsFormsApp1
 
         private void SaveCreatureButton_Click(object sender, EventArgs e)
         {
-            if (!IsFormComplete())  //if the form is not filled out properly, we will exit. IsFormComplete displays the errors itself
+            if (!IsCreatureFormComplete())  //if the form is not filled out properly, we will exit. IsFormComplete displays the errors itself
             {
                 return;
             }
             BuildActiveCreature();
             ActiveCreature.ExportAsHTML("",ActiveCreature.Name+".html");
+            CreatureList.Add(ActiveCreature);
+            EncounterCreaturesComboBox.Items.Add(ActiveCreature.Name);
         }
 
-        private bool IsFormComplete()
+        private bool IsCreatureFormComplete()
         {
             //this function checks to make sure all necessary form controls have been properly filled
             //in the future, it may also give warnings or recommendations about inadvisable creature choices (e.g. a creature with a speed of 0 cannot move)
@@ -85,6 +91,39 @@ namespace WindowsFormsApp1
             ActiveCreature.Notes = NotesTextBox.Text;
             //Actions are already set using the "Add Action" button
             ActiveCreature.CalculateXP();   //XP is not currently a separate input
+        }
+
+        private void SaveEncounterButton_Click(object sender, EventArgs e)
+        {
+            if (!IsEncounterFormComplete())
+            {
+                break
+            }
+        }
+
+        private void EncounterAddCreatureButton_Click(object sender, EventArgs e)
+        {
+            ActiveEncounter.CreatureList.Add(new CreatureInstance(EncounterCreatureNameTextBox.Text, CreatureList[EncounterCreaturesComboBox.SelectedIndex]));
+            EncounterCreatureListView.Items.Add(EncounterCreatureNameTextBox.Text);
+        }
+
+        private bool IsEncounterFormComplete()
+        {            
+            return true;
+        }
+
+        private void EncounterRemoveCreatureButton_Click(object sender, EventArgs e)
+        {
+            ActiveEncounter.CreatureList.RemoveAt(EncounterCreatureListView.SelectedIndices[0]);
+            EncounterCreatureListView.Items.RemoveAt(EncounterCreatureListView.SelectedIndices[0]);
+        }
+
+        private void BuildActiveEncounter()
+        {
+            ActiveEncounter.Name = EncounterNameTextBox.Text;
+            ActiveEncounter.Description = EncounterDescriptionTextBox.Text;
+            ActiveEncounter.Loot = EncounterLootTextBox.Text;
+            //Creatures are already set using the "Add Creature" button
         }
     }
 }
