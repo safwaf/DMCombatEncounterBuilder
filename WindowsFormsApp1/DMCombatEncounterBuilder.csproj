@@ -59,7 +59,15 @@
     <Compile Include="NPC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room.cs" />
     <Compile Include="Shop.cs" />
+    <Compile Include="Trap.cs" />
+    <Compile Include="DungeonDesignControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DungeonDesignControl.Designer.cs">
+      <DependentUpon>DungeonDesignControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -72,6 +80,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DungeonDesignControl.resx">
+      <DependentUpon>DungeonDesignControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
